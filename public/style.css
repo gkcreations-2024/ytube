@@ -1,0 +1,182 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* Heading */
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #00f2ff;
+}
+
+/* Input */
+input[type="text"] {
+  width: 80%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Button */
+button {
+  margin-top: 30px;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #00f2ff, #ff00d4);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00f2ff, 0 0 25px #ff00d4;
+}
+
+/* Thumbnail & Options */
+#videoDetails {
+  margin-top: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#thumbnailContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#videoThumbnail {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00f2ff;
+}
+
+#videoInfo {
+  text-align: left;
+  max-width: 300px;
+}
+
+#formatSelect {
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Download Circle */
+#downloadingCircle {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.circle {
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid #00f2ff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+#downloadPercentage {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #00f2ff;
+}
+
+/* Success Message */
+#successMessage {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #0f0;
+  animation: popIn 0.8s ease forwards;
+}
+
+#celebrationEffect {
+  display: none;
+  background-image: url('./congratulations-13773.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 150px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Button Loader Spinner */
+button .loader {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
